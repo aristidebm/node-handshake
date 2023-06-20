@@ -1,0 +1,41 @@
+# @name: List all todos.
+GET http://127.0.0.1:8000/api/v1/todos/
+Content-Type: application/json
+
+###
+
+# @name: Retrieve a todo.
+GET http://127.0.0.1:8000/api/v1/todos/7d69cbec-06a0-4139-9b5b-190a41a9421b/
+Content-Type: application/json
+
+###
+
+# @name: Create a todo.
+POST  http://127.0.0.1:8000/api/v1/todos/
+Content-Type: application/json
+
+{
+    "title": "My work",
+    "description": "This work will consist off many."
+}
+
+###
+
+# @name: Update a todo.
+PATCH  http://127.0.0.1:8000/api/v1/todos/7d69cbec-06a0-4139-9b5b-190a41a9421b
+Content-Type: application/json
+
+{
+    "state": "created"
+}
+
+###
+
+# @name: Delete a todo.
+DELETE  http://127.0.0.1:8000/api/v1/todos/1
+Content-Type: application/json
+
+
+### @name: get openapi documentation
+GET http://127.0.0.1:8000/api/v1/docs/
+Content-Type: application/json
